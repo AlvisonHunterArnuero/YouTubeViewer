@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/YouTubeViewer/static/css/main.6c18dba5.chunk.css",
+    "main.js": "/YouTubeViewer/static/js/main.9ff04a9f.chunk.js",
+    "main.js.map": "/YouTubeViewer/static/js/main.9ff04a9f.chunk.js.map",
+    "runtime-main.js": "/YouTubeViewer/static/js/runtime-main.17b134f1.js",
+    "runtime-main.js.map": "/YouTubeViewer/static/js/runtime-main.17b134f1.js.map",
+    "static/js/2.a6606e75.chunk.js": "/YouTubeViewer/static/js/2.a6606e75.chunk.js",
+    "static/js/2.a6606e75.chunk.js.map": "/YouTubeViewer/static/js/2.a6606e75.chunk.js.map",
+    "index.html": "/YouTubeViewer/index.html",
+    "precache-manifest.bbac5aa2652334575e3a986d2c579a54.js": "/YouTubeViewer/precache-manifest.bbac5aa2652334575e3a986d2c579a54.js",
+    "service-worker.js": "/YouTubeViewer/service-worker.js",
+    "static/css/main.6c18dba5.chunk.css.map": "/YouTubeViewer/static/css/main.6c18dba5.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17b134f1.js",
+    "static/js/2.a6606e75.chunk.js",
+    "static/css/main.6c18dba5.chunk.css",
+    "static/js/main.9ff04a9f.chunk.js"
+  ]
+}
