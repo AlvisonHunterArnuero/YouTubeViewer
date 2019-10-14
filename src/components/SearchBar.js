@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
   <h1 className="display-4">Yet another YouTube Search Tool </h1>
   <p className="lead">This is a simple app based on a practice project for a <b>Stephen Grider Udemy course</b> I am currently taking based on The
   React library and that is called <b className="text-primary"> React.js - The Complete Guide (including Hooks, React Router, Redux).</b> This was initially intended to be layed out using the Semantic UI library but I decided to use Bootstrap 4 instead since 
-  I feel more confortable working with it. I also changed the look and feel as well as the layout of the original verion.</p>
+  I feel more confortable working with it. I also changed the look and feel as well as the layout of the original version.</p>
 
   <form onSubmit={this.onFormSubmit}>
   <div className="form-group">
