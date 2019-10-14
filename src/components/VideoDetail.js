@@ -1,35 +1,19 @@
 import React from "react";
 
 const VideoDetail = ({ video }) => {
-  let msgTitle = !video ? (
-    "Please type in your search criteria"
-  ) : (
-    <p className="ui green label">
-      You are now watching: {video.snippet.title}
-    </p>
-  );
-
-  let msgDescription = !video ? (
-    <p className="ui phm bg-white blue">
-      Video Description will appear here upon video selection process.
-    </p>
-  ) : (
-    <p className="ui phm bg-white blue">{video.snippet.description}</p>
-  );
+  let msgTitle = !video ? "Please type in your search criteria" : <b className="text-uppercase">You are now watching: {video.snippet.title}</b>;
+  let msgDescription = !video ? "Video Description will appear here upon video selection process.": <h6>{video.snippet.description}</h6>;
 
   const videoSrc = !video
     ? ""
     : `https://www.youtube.com/embed/${video.id.videoId}`;
-  return (
-    <div>
-      <div className="ui embed">
-        <iframe title={msgTitle} src={videoSrc} />
-      </div>
-      <div className="ui segment">
-        <h4 className="ui header">{msgTitle}</h4>
-        <div className="phm bg-blue black">{msgDescription}</div>
-      </div>
-    </div>
+  return (<>
+  <div className="embed-responsive embed-responsive-16by9">
+<iframe className="embed-responsive-item" title={msgTitle} src={videoSrc} />
+</div>
+<div className="col-12 p-3 mb-2 bg-info text-white"><b>{msgTitle}</b>
+{msgDescription}</div>
+</>
   );
 };
 

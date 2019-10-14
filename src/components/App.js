@@ -8,7 +8,7 @@ class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
   componentDidMount() {
-    this.onTermSubmit("Javascript ES6");
+    this.onTermSubmit("React.js Tutorials 2019");
   }
   onTermSubmit = async term => {
     const response = await youtube.get("/search", {
@@ -27,25 +27,22 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className="ui segment">
-        <SearchBar onTermSubmit={this.onTermSubmit} />
-        <div className="ui grid">
-          <div className="ui row">
-            <div className="eleven wide column">
-              <VideoDetail video={this.state.selectedVideo} />
-            </div>
-            <div className="five wide column">
-              <VideoList
-                onVideoSelect={this.onVideoSelect}
-                videos={this.state.videos}
-              />
-            </div>
-          </div>
+      <div className="container-fluid">
+        <div className="row">
+          <SearchBar onTermSubmit={this.onTermSubmit} />
+        </div>
+        <div className="row">
+          <VideoList
+            onVideoSelect={this.onVideoSelect}
+            videos={this.state.videos}
+          />
+        </div>
+        <div className="row mp-4 mb-2">
+        <hr/>
+          <VideoDetail video={this.state.selectedVideo} />
         </div>
       </div>
     );
   }
 }
 export default App;
-
-// AIzaSyDpE1u9y4u_zeNzL2hxvif6rJxCmBHlxqI

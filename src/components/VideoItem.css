@@ -1,11 +1,32 @@
+
 .video-item {
   display: flex !important;
   align-items: center !important;
   cursor: pointer;
 }
+.card {
+  cursor: pointer !important;
+}
+
+.card:hover {
+  -moz-box-shadow: 6px 5px 8px #8f8f8f;
+  -webkit-box-shadow: 6px 5px 8px #8f8f8f;
+  box-shadow: 6px 5px 8px #8f8f8f;
+  -moz-transform: scale(0.96);
+-webkit-transform: scale(0.96);
+-o-transform: scale(0.96);
+-ms-transform: scale(0.96);
+transform: scale(0.96);
+}
 
 .video-item.item img {
-  max-width: 450px;
+  max-width: 85%;
+}
+
+p.titulo {
+  max-width: 85%;
+  text-align: center;
+  font-size: 14px;
 }
 
 .videoDescription {
