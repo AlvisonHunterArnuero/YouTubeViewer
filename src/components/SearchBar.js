@@ -1,10 +1,10 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: "" };
+  state = { term: "", quotelimit:"" };
 
   onInputChange = event => {
-    this.setState({ term: event.target.value });
+    this.setState({ term: event.target.value, quotelimit: this.props.quotelimit });
   };
 
   onFormSubmit = event => {
@@ -12,14 +12,17 @@ class SearchBar extends React.Component {
     this.props.onTermSubmit(this.state.term);
   };
 
+
   render() {
     return (
 <div className="jumbotron col-lg-12">
   <h1 className="display-4">Yet another YouTube Search Tool </h1>
-  <p className="lead">This is a simple app based on a practice project for a <b>Stephen Grider Udemy course</b> I am currently taking based on The
-  React library and that is called <b className="text-primary"> React.js - The Complete Guide (including Hooks, React Router, Redux).</b> This was initially intended to be layed out using the Semantic UI library but I decided to use Bootstrap 4 instead since 
-  I feel more confortable working with it. I also changed the look and feel as well as the layout of the original version.</p>
-  <small className="text-dark">NOTE: If you don't see any rendering on the screen is because my YouTube API key gets expired every certain limit, hence I shall have to change it regulary.</small>
+  <p className="lead">This is a simple app based on a practice project for a <b className="text-muted">Stephen Grider Udemy course</b> I am currently taking based on The
+  React library and that is called <b className="text-primary"> React.js - The Complete Guide (including Hooks, React Router, Redux).</b> This was initially intended to 
+  be layed out using the <b className="text-muted"> Semantic UI library</b> but I decided to use <b className="text-muted"> Bootstrap 4 </b>instead since 
+  I feel more confortable working with it. I've proceeded to change the original look and feel as well as its layout to my own version.</p>
+
+  <p className="text-muted">{this.props.quotelimit} </p>
 
   <form onSubmit={this.onFormSubmit}>
   <div className="form-group">

@@ -5,7 +5,7 @@ import VideoDetail from "./VideoDetail";
 import youtube from "../apis/youtube";
 
 class App extends React.Component {
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], msgNotReady: "", selectedVideo: null };
 
   componentDidMount() {
     this.onTermSubmit("React.js Tutorials 2019");
@@ -16,10 +16,13 @@ class App extends React.Component {
         q: term
       }
     });
+    let results = (response.data.items) ? "Please use the search bar below to begin.":"NOTE: You've exceeded the daily allowed numbers of requests for the YouTube API. Please try another day." ;
     this.setState({
       videos: response.data.items,
+      msgNotReady: results,
       selectedVideo: response.data.items[0]
     });
+    console.log(this.state.msgNotReady);
   };
 
   onVideoSelect = video => {
@@ -29,7 +32,7 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <SearchBar onTermSubmit={this.onTermSubmit} />
+          <SearchBar onTermSubmit={this.onTermSubmit} quotelimit = {this.state.msgNotReady}/>
         </div>
         <div className="row">
           <VideoList
