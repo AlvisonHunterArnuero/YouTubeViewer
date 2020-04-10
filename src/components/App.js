@@ -18,7 +18,7 @@ class App extends React.Component {
     });
     let results = response.data.items
       ? "Please use the search bar below to begin."
-      : "NOTE: You've exceeded the daily allowed numbers of requests for the YouTube API. Please try another day.";
+      : "NOTE: You've exceeded the daily allowed numbers of requests from the YouTube API. Please try another day.";
     this.setState({
       videos: response.data.items,
       msgNotReady: results,
